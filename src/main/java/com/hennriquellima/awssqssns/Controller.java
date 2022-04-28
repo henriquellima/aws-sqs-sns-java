@@ -17,10 +17,10 @@ public class Controller {
         return ResponseEntity.ok("Mensagem Enviada");
     }
 
-    @GetMapping("/clearqueue")
+    @GetMapping("/processqueue")
     public ResponseEntity<String> clearQueue(){
         messageReader();
 
-        return ResponseEntity.ok("Mensagem foi limpa, verifique o terminal para ver as mensagem.");
+        return ResponseEntity.ok("Uma mensagem foi processada, verifique o terminal para ver essa mensagem.");
     }
 }
