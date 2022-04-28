@@ -42,7 +42,9 @@ public class SQSService {
         GetQueueUrlResponse createResult = sqsClient.getQueueUrl(request);
 
         List<Message> messages = receiveMessages(sqsClient, createResult.queueUrl());
-        // System.out.println("Quantidade de mensagens: " + messages.size());
+
+
+        System.out.println("Quantidade de mensagens: " + messages.size());
 
         for (Message mess : messages) {
             System.out.println("Mensagem: " + mess.body());
@@ -56,8 +58,8 @@ public class SQSService {
     public static  List<Message> receiveMessages(SqsClient sqsClient, String queueUrl) {
         ReceiveMessageRequest receiveMessageRequest = ReceiveMessageRequest.builder()
                 .queueUrl(queueUrl)
-                .waitTimeSeconds(20) // Long Polling Explicar conceito para econmizar $$
-                .maxNumberOfMessages(5)
+                .waitTimeSeconds(20)
+                .maxNumberOfMessages(1)
                 .build();
         List<Message> messages = sqsClient.receiveMessage(receiveMessageRequest).messages();
         return messages;

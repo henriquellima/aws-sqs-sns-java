@@ -21,6 +21,6 @@ public class Controller {
     public ResponseEntity<String> clearQueue(){
         messageReader();
 
-        return ResponseEntity.ok("Fila lida e limpa, verifique o terminal para ver as mensagens.");
+        return ResponseEntity.ok("Mensagem foi limpa, verifique o terminal para ver as mensagem.");
     }
 }
