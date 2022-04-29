@@ -1,7 +1,7 @@
 # aws-sns-java
 Testing AWS - SQS using java.
 
-This app have 2 routes. 
+This app has 2 routes. 
 
 1 - Sends messages to a SNS service that has a SQS service subscribed.
 
