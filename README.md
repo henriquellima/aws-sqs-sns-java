@@ -3,6 +3,6 @@ Testing AWS - SQS using java.
 
 This app have 2 routes. 
 
-1 - Send messages for a SNS service that has a SQS subscribed.
+1 - Send messages to a SNS service that has a SQS subscribed.
 
-2 - Received, consume and delete the messages of a SQS service who we have sent using the frist rote.
+2 - Receive, consume and delete the messages of the SQS service subscribed, using the frist rote.
